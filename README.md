@@ -1,18 +1,18 @@
-### Telnet - Teletype Network
-
-On Windows - 
+### On Windows - 
 
 Control Panel\Programs\Programs and Features - Turn windows features on or off - Check Telnet Client
 
 C:\Users\anup.mondal>telnet towel.blinkenlights.nl
 
-On CentOS - 
+__On CentOS - __
 
-Connect internet
-[anup@localhost ~]$ su -
-[root@localhost ~]# dhclient -v
+__Connect internet__
 
-Install Telnet - 
+[anup@localhost ~]$ su -  
+
+[root@localhost ~]# dhclient -v  
+
+__Install Telnet - __
 [root@localhost ~]# rpm -qa | grep telnet
 [root@localhost ~]# yum install telnet-server telnet
 
