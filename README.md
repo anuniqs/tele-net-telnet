@@ -4,7 +4,7 @@ Control Panel\Programs\Programs and Features - Turn windows features on or off -
 
 C:\Users\anup.mondal>telnet towel.blinkenlights.nl
 
-__On CentOS  —__
+### On CentOS  —
 
 __Connect internet__
 
@@ -43,7 +43,7 @@ __Try Telnet —__
 
 [root@localhost ~]# telnet localhost  
 
-__On Ubuntu  —__   
+### On Ubuntu  —   
 
 __Installation  —__   
 
@@ -56,3 +56,8 @@ __Telnet service  —__
 anup@megatron:~$ sudo systemctl status inetd  
 
 anup@megatron:~$ telnet localhost  
+
+
+<hr />
+
+`@ Anup Kumar Mondal, AnuRish Brand Corp. , +91-9620481097 , uniqs.anup@gmail.com , https://www.linkedin.com/in/anuniqs/`
