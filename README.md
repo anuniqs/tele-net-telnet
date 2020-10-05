@@ -4,6 +4,8 @@ Control Panel\Programs\Programs and Features - Turn windows features on or off -
 
 C:\Users\anup.mondal>telnet towel.blinkenlights.nl
 
+
+  
 ### On CentOS  —
 
 __Connect internet__
@@ -12,17 +14,20 @@ __Connect internet__
 
 [root@localhost ~]# dhclient -v  
 
+
 __Install Telnet  —__  
 
 [root@localhost ~]# rpm -qa | grep telnet  
 
 [root@localhost ~]# yum install telnet-server telnet  
 
+
 __Add the service to firewalld  —__    
 
 [root@localhost ~]# firewall-cmd --add-service=telnet --zone=public  
 
 [root@localhost ~]# firewall-cmd --add-service=telnet --zone=public --permanent  
+
 
 __Telnet service  —__  
 
@@ -43,6 +48,8 @@ __Try Telnet —__
 
 [root@localhost ~]# telnet localhost  
 
+
+  
 ### On Ubuntu  —   
 
 __Installation  —__   
@@ -51,9 +58,13 @@ anup@megatron:~$ sudo apt-get update
 
 anup@megatron:~$ sudo apt-get install telnetd  
 
+
 __Telnet service  —__  
 
 anup@megatron:~$ sudo systemctl status inetd  
+
+
+__Try Telnet —__
 
 anup@megatron:~$ telnet localhost  
 
