@@ -18,13 +18,13 @@ __Install Telnet  —__
 
 [root@localhost ~]# yum install telnet-server telnet  
 
-Add the service to firewalld  —    
+__Add the service to firewalld  —__    
 
 [root@localhost ~]# firewall-cmd --add-service=telnet --zone=public  
 
 [root@localhost ~]# firewall-cmd --add-service=telnet --zone=public --permanent  
 
-Telnet service  —  
+__Telnet service  —__  
 
 [root@localhost ~]# systemctl start telnet.socket  
 
@@ -38,17 +38,20 @@ Telnet service  —
 
 [root@localhost ~]# systemctl disable telnet.socket  
 
+
+__Try Telnet —__  
+
 [root@localhost ~]# telnet localhost  
 
-On Ubuntu  —   
+__On Ubuntu  —__   
 
-Installation  —   
+__Installation  —__   
 
 anup@megatron:~$ sudo apt-get update  
 
 anup@megatron:~$ sudo apt-get install telnetd  
 
-Telnet service  —  
+__Telnet service  —__  
 
 anup@megatron:~$ sudo systemctl status inetd  
 
