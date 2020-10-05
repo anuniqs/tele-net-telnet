@@ -1,4 +1,4 @@
-### On Windows - 
+### On Windows — 
 
 Control Panel\Programs\Programs and Features - Turn windows features on or off - Check Telnet Client
 
