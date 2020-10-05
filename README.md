@@ -4,7 +4,7 @@ Control Panel\Programs\Programs and Features - Turn windows features on or off -
 
 C:\Users\anup.mondal>telnet towel.blinkenlights.nl
 
-__On CentOS - __
+__On CentOS -__
 
 __Connect internet__
 
@@ -12,32 +12,44 @@ __Connect internet__
 
 [root@localhost ~]# dhclient -v  
 
-__Install Telnet - __
-[root@localhost ~]# rpm -qa | grep telnet
-[root@localhost ~]# yum install telnet-server telnet
+__Install Telnet -__  
 
-Add the service to firewalld - 
-[root@localhost ~]# firewall-cmd --add-service=telnet --zone=public
-[root@localhost ~]# firewall-cmd --add-service=telnet --zone=public --permanent
+[root@localhost ~]# rpm -qa | grep telnet  
 
-Telnet service - 
-[root@localhost ~]# systemctl start telnet.socket
-[root@localhost ~]# systemctl status telnet.socket
-[root@localhost ~]# systemctl restart telnet.socket
-[root@localhost ~]# systemctl reload telnet.socket
+[root@localhost ~]# yum install telnet-server telnet  
 
-[root@localhost ~]# systemctl enable telnet.socket
-[root@localhost ~]# systemctl disable telnet.socket
+Add the service to firewalld -  
 
-[root@localhost ~]# telnet localhost
+[root@localhost ~]# firewall-cmd --add-service=telnet --zone=public  
 
-On Ubuntu - 
+[root@localhost ~]# firewall-cmd --add-service=telnet --zone=public --permanent  
 
-Installation - 
-anup@megatron:~$ sudo apt-get update
-anup@megatron:~$ sudo apt-get install telnetd
+Telnet service -  
 
-Telnet service -
-anup@megatron:~$ sudo systemctl status inetd
+[root@localhost ~]# systemctl start telnet.socket  
 
-anup@megatron:~$ telnet localhost
+[root@localhost ~]# systemctl status telnet.socket  
+
+[root@localhost ~]# systemctl restart telnet.socket  
+
+[root@localhost ~]# systemctl reload telnet.socket  
+
+[root@localhost ~]# systemctl enable telnet.socket  
+
+[root@localhost ~]# systemctl disable telnet.socket  
+
+[root@localhost ~]# telnet localhost  
+
+On Ubuntu -   
+
+Installation -   
+
+anup@megatron:~$ sudo apt-get update  
+
+anup@megatron:~$ sudo apt-get install telnetd  
+
+Telnet service -  
+
+anup@megatron:~$ sudo systemctl status inetd  
+
+anup@megatron:~$ telnet localhost  
