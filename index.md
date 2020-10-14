@@ -1,37 +1,69 @@
-## Welcome to GitHub Pages
+### On Windows — 
 
-You can use the [editor on GitHub](https://github.com/anuniqs/tele-net-telnet/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Control Panel\Programs\Programs and Features - Turn windows features on or off - Check Telnet Client
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+C:\Users\anup.mondal>telnet towel.blinkenlights.nl
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+  
+### On CentOS  —
 
-```markdown
-Syntax highlighted code block
+__Connect internet__
 
-# Header 1
-## Header 2
-### Header 3
+[anup@localhost ~]$ su -  
 
-- Bulleted
-- List
+[root@localhost ~]# dhclient -v  
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+__Install Telnet  —__  
 
-[Link](url) and ![Image](src)
-```
+[root@localhost ~]# rpm -qa | grep telnet  
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+[root@localhost ~]# yum install telnet-server telnet  
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/anuniqs/tele-net-telnet/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+__Add the service to firewalld  —__    
 
-### Support or Contact
+[root@localhost ~]# firewall-cmd --add-service=telnet --zone=public  
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[root@localhost ~]# firewall-cmd --add-service=telnet --zone=public --permanent  
+
+
+__Telnet service  —__  
+
+[root@localhost ~]# systemctl start telnet.socket  
+
+[root@localhost ~]# systemctl status telnet.socket  
+
+[root@localhost ~]# systemctl restart telnet.socket  
+
+[root@localhost ~]# systemctl reload telnet.socket  
+
+[root@localhost ~]# systemctl enable telnet.socket  
+
+[root@localhost ~]# systemctl disable telnet.socket  
+
+
+__Try Telnet —__  
+
+[root@localhost ~]# telnet localhost  
+
+
+  
+### On Ubuntu  —   
+
+__Installation  —__   
+
+anup@megatron:~$ sudo apt-get update  
+
+anup@megatron:~$ sudo apt-get install telnetd  
+
+
+__Telnet service  —__  
+
+anup@megatron:~$ sudo systemctl status inetd  
+
+
+__Try Telnet —__
+
+anup@megatron:~$ telnet localhost  
