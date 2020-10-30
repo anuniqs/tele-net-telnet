@@ -69,6 +69,21 @@ __Try Telnet —__
 anup@megatron:~$ telnet localhost  
 
 
-<hr />
 
-`@ Anup Kumar Mondal, AnuRish Brand Corp. , +91-9620481097 , uniqs.anup@gmail.com , https://www.linkedin.com/in/anuniqs/`
+### On RedHat  —
+
+[root@localhost ~]# rpm -ivh telnet-0.17-64.el7.x86_64.rpm
+
+[root@localhost ~]# rpm -ivh telnet-server-0.17-64.el7.x86_64.rpm
+
+[root@localhost ~]# firewall-cmd --add-service=telnet --zone=public
+
+[root@localhost ~]# firewall-cmd --add-service=telnet --zone=public --permanent
+
+[root@localhost ~]# systemctl start telnet.socket
+
+[root@localhost ~]# systemctl enable telnet.socket
+
+[root@localhost ~]# ip a
+
+[root@localhost ~]# telnet localhost
